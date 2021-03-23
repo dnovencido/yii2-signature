@@ -28,25 +28,25 @@ class SignatureWidget extends \yii\base\Widget
         if ($this->height === null)
             $this->height = '300px';
         if ($this->save_png == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-png">Save as PNG</button>';
+            $this->save_buttons .= '<button type="button" class="button btn-secondary btn-sm float-left save" data-action="save-png">Save as PNG</button>';
         }
         if ($this->save_jpg == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-jpg">Save as JPG</button>';
+            $this->save_buttons .= '<button type="button" class="button btn-secondary btn-sm float-left save" data-action="save-jpg">Save as JPG</button>';
         }
         if ($this->save_svg == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-svg">Save as SVG</button>';
+            $this->save_buttons .= '<button type="button" class="button btn-secondary btn-sm float-left save" data-action="save-svg">Save as SVG</button>';
         }
         if ($this->save_server == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-server" onclick="saveToServer(\'' . $this->url . '\')">Save in Database</button>';
+            $this->save_buttons .= '<button type="button" class="button btn btn-success btn-sm float-right save" data-action="save-server" onclick="saveToServer(\'' . $this->url . '\')"><i class="fas fa-save"></i> Save</button>';
         }
         if ($this->clear == true) {
-            $this->action_buttons .= '<button type="button" class="button clear" data-action="clear">Clear</button>';
+            $this->action_buttons .= '<button type="button" class="button btn btn-secondary btn-sm mr-1 float-left clear" data-action="clear"> <i class="fas fa-eraser"></i> Clear</button>';
         }
         if ($this->change_color == true) {
-            $this->action_buttons .= '<button type="button" class="button" data-action="change-color">Change color</button>';
+            $this->action_buttons .= '<button type="button" class="button btn btn-secondary btn-sm mr-1 float-left" data-action="change-color">Change color</button>';
         }
         if ($this->undo == true) {
-            $this->action_buttons .= '<button type="button" class="button" data-action="undo">Undo</button>';
+            $this->action_buttons .= '<button type="button" class="button btn btn-secondary btn-sm float-left" data-action="undo"> <i class="fas fa-undo-alt"></i> Undo</button>';
         }
         SignatureAsset::register($this->view);
     }
