@@ -1,3 +1,5 @@
-canvas {
-
+.signature-pad--body canvas {
+    width: 100%;
+    border: 1px dashed #BFBFBF;
+    margin-top: 1em;
 }
